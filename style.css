@@ -15,6 +15,7 @@
   */
   html, body {
     height: 100%;
+    font-family: 'Roboto Serif', serif;;
   }
   /*
     Typographic tweaks!
@@ -36,13 +37,13 @@
     7. Remove built-in form typography styles
   */
   input, button, textarea, select {
-    font: inherit;
+   
   }
   /*
     8. Avoid text overflows
   */
   p, h1, h2, h3, h4, h5, h6 {
-    overflow-wrap: break-word;
+   
   }
   /*
     9. Create a root stacking context
@@ -56,6 +57,26 @@
   --yellow: #FEBD2F;
   }
 
+  h1 {
+    font-size: 64px;
+  }
+
+  h2 {
+    font-size: 40px;
+   
+
+  }
+
+  h3 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+.navbar, .headliner, .card-section {
+  padding-left: 80px;
+  padding-right: 80px;
+}
+
   .grid-parent {
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -66,26 +87,57 @@
     "cards cards cards cards"
     "footer footer footer footer";
   }
+  
   .navbar {
     grid-area: nav;
     background-color: aliceblue;
+    
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
+
+  .navbutton {
+    
+  }
+
   .headliner {
     grid-area: headliner;
     background-color:var(--greywhite);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 50px;
   }
+
+  .headline {
+    padding-right: 80px;
+  }
+
   .img {
     grid-area: img;
     background-color: aqua;
+    padding-left: 70px;
   }
   .card-section {
     grid-area: cards;
     background-color: aquamarine;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+  }
 
+  .cards {
+    width: 400px;
+    height: 324px;
+    background-color:white ;
+    border-radius: 40px;
+    padding: 40px;
+    gap: 20px;
+  }
+
+  .card1 {
+    background-color: var(--yellow);
   }
   .footer {
     grid-area: footer;
@@ -94,12 +146,20 @@
     justify-content: center;
     align-items: center;
   }
+
   .leftmenu {
     display: flex;
     flex-direction: row;
   }
+  .aboutus {
+    transform: translateX(20px);
+  }
 
-
+  @media screen and (max-width: 400px) {
+    .headliner {
+        font-size: 18px;
+    }
+}
 
 
 
